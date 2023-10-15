@@ -28,13 +28,17 @@ Structure - Organised with one player at the top, and the other player at the bo
 Player icon - Players choose between 4 different animal icons. I chose animal icons because I feel it makes the game more playful. The animals will be characters from The Lion King that were present during the song Hakuna Matata. The Hakuna Matata philosophy is the base philosophy I utilized when designing the game. "Don't worry, be happy", this game is to let loose while still exploring your competitive side for the ultimate good vibes. The characters are Timon, Pumbaa, Simba, Nala.
 
 Roll button - this is the button players click on to roll any dice they didn't keep. When rolling, the dice will have a little shake animation to simulate the process of rolling the dice. It will be black with white text
+![Full board](<Game Design.png>)
+![Player area](<Playing Area.png>)
 
 ### Score Board
 - **Design:** 
 Background - light grey back ground with pastel blue lines and black text.Simple table format with each possible score combination and a total score for the rows, and a column for each player to tally their score.
+![Score card design](<Score Card.png>)
 
 ### Dice design
 - **Design:** White with black dots. I want to keep it standard to still maintain that digital board game effect. 
+![Dice design](Dice.png)
 
 ## **Conclusion**
 This documentation serves as a concise reference guide for the design system used in the Yatzy game, aiming to facilitate development and maintain consistency in design throughout the project.
