@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="yatzy.css">
+    
+</head>
+<body>
+    <h1 class="title">Yatzy</h1>
+    
+    <!-- dice -->
+    <div class = "dice-container">
+        <img class="dice" id="d1" src=dice1.png alt="Dice 1">
+        <img class="dice" id="d2" src=dice1.png alt="Dice 2">
+        <img class="dice" id="d3" src=dice1.png alt="Dice 3">
+        <img class="dice" id="d4" src=dice1.png alt="Dice 4">
+        <img class="dice" id="d5" src=dice1.png alt="Dice 5">
+    </div>
+
+    <!-- score card -->
+     <button id="roll-button">Roll</button>
+
+
+     <div class="scorecard-container">
+        <table class="scorecard">
+            <!-- Score card Table content -->
+            <tr>
+                <th></th>
+                <th colspan="4">Score Card</th>
+            </tr>
+            <!-- Ones & three of a kind row -->
+            <tr>
+                <td>Ones</td>
+                <td><input type="text" id="ones" value="0"></td>
+
+                <td>Three of a Kind</td>
+                <td><input type="text" id="three-kind" value="0"></td>
+            </tr>
+            <!-- Twos and four of a kind row -->
+            <tr>
+                <td>Twos</td>
+                <td><input type="text" id="twos" value="0"></td>
+
+                <td>Four of a Kind</td>
+                <td><input type="text" id="four-kind" value="0"></td>
+            </tr>
+            <!-- Threes and full house row -->
+            <tr>
+                <td>Threes</td>
+                <td><input type="text" id="threes" value="0"></td>
+
+                <td>Full House</td>
+                <td><input type="text" id="full-house" value="0"></td>
+            </tr>
+            <!-- Fours and small straight row -->
+            <tr>
+                <td>Fours</td>
+                <td><input type="text" id="fours" value="0"></td>
+
+                <td>Small Straight</td>
+                <td><input type="text" id="small-straight" value="0"></td>
+            </tr>
+            <!-- Fives and large straight row -->
+            <tr>
+                <td>Fives</td>
+                <td><input type="text" id="fives" value="0"></td>
+
+                <td>Large Straight</td>
+                <td><input type="text" id="large-straight" value="0"></td>
+            </tr>
+            <!-- Sixes and chance row -->
+            <tr>
+                <td>Sixes</td>
+                <td><input type="text" id="sixes" value="0"></td>
+
+                <td>Chance</td>
+                <td><input type="text" id="chance" value="0"></td>
+            </tr>
+            <!-- yatzy & total row -->
+            <tr>
+                <td>Yatzy</td>
+                <td><input type="text" id="yatzy" value="0"></td>
+
+                <td><strong>Total Score</strong></td>
+                <td><input type="text" id="total-score" value="0"></td>
+            </tr>
+            
+        </table>
+    </div>
+       
+    <script src="dice.js"></script>
+   
+</body>
+</html>

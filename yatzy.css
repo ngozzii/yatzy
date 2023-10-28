@@ -1,0 +1,72 @@
+body {
+    font-family: "Celandine", sans-serif;
+    background-color: #D7E6F1;
+    text-align: center;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+}
+
+.dice {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+button#roll-button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #04365B;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button#roll-button:hover {
+    background-color: #1C8BDD;
+}
+
+button#roll-button:focus {
+    outline: none;
+}
+
+.scorecard {
+    inline-size: 300px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.scorecard th {
+    background-color: #F6F4F4;
+}
+
+.scorecard th, .scorecard td {
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+.scorecard tr:nth-child(odd) {
+    background-color: #1C8BDD;
+}
+
+.scorecard tr:nth-child(even) {
+    background-color: #D7E6F1;
+}
+
+@keyframes roll {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* Define the roll animation */
+/*@keyframes roll {
+    0% {transform: rotate(0deg); }
+    50% {transform: rotate(360deg);}
+    100% {transform: rotate(0deg);}
+}*/
+
