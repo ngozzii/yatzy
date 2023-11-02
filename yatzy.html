@@ -18,11 +18,40 @@
         <img class="dice" id="d5" src=dice1.png alt="Dice 5">
     </div>
 
+    <div class = "button-container">
+        <button id="roll-button">Roll</button>
+        <button id="play-button">Play</button>
+    </div>
+
+    <!-- Modal Dialog -->
+    <div id="category-modal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Choose a category to score in:</p>
+        <select id="category-select">
+            <option value="ones">Ones</option>
+            <option value="twos">Twos</option>
+            <option value="threes">Threes</option>
+            <option value="fours">Fours</option>
+            <option value="fives">Fives</option>
+            <option value="sixes">Sixes</option>
+            <option value="onePair">One Pair</option>
+            <option value="twoPair">Two Pairs</option>
+            <option value="threeKind">Three of a Kind</option>
+            <option value="fourKind">Four of a Kind</option>
+            <option value="smallStraight">Small Straight</option>
+            <option value="largeStraight">Large Straight</option>
+            <option value="fullHouse">Full House</option>
+            <option value="chance">Chance</option>
+            <option value="yatzy">Yatzy</option>
+        </select>
+        
+        <button id="select-category">Select</button>
+        </div>
+    </div>
+
     <!-- score card -->
-     <button id="roll-button">Roll</button>
-
-
-     <div class="scorecard-container">
+    <div class="scorecard-container">
         <table class="scorecard">
             <!-- Score card Table content -->
             <tr>
@@ -77,6 +106,14 @@
                 <td>Chance</td>
                 <td><input type="text" id="chance" value="0"></td>
             </tr>
+            <!-- One pair and Two pairs row -->
+            <tr>
+                <td>One Pair</td>
+                <td><input type="text" id="onePair" value="0"></td>
+
+                <td>Two Pairs</td>
+                <td><input type="text" id="twoPairs" value="0"></td>
+            </tr>
             <!-- yatzy & total row -->
             <tr>
                 <td>Yatzy</td>
@@ -88,8 +125,10 @@
             
         </table>
     </div>
-       
-    <script src="dice.js"></script>
+    
+    <script type="module" src="dice.js"></script>
+    <script type="module" src="YatzyEngine.js"></script>
+    <script type="module" src="YatzyGame.js"></script>
    
 </body>
 </html>

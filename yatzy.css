@@ -13,9 +13,15 @@ body {
     width: 100px;
     height: 100px;
     margin: 5px;
+    animation: none;
+    cursor: pointer; /* Add a pointer cursor to indicate interactivity */
 }
 
-button#roll-button {
+.dice.selected {
+    outline: 2px solid blue; /* Add a blue outline when selected */
+}
+
+button {
     margin: 20px;
     padding: 10px 20px;
     background-color: #04365B;
@@ -26,12 +32,12 @@ button#roll-button {
     border-radius: 5px;
 }
 
-button#roll-button:hover {
+button:hover {
     background-color: #1C8BDD;
 }
 
-button#roll-button:focus {
-    outline: none;
+button:focus {
+    outline: black;
 }
 
 .scorecard {
@@ -58,15 +64,38 @@ button#roll-button:focus {
     background-color: #D7E6F1;
 }
 
-@keyframes roll {
-    0% { transform: rotateX(0deg) rotateY(0deg); }
-    100% { transform: rotateX(360deg) rotateY(360deg); }
-}
+/* Styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .modal-content {
+    background-color: #f4f4f4;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+  
+  .close {
+    float: right;
+    cursor: pointer;
+  }
+  
 
-/* Define the roll animation */
-/*@keyframes roll {
-    0% {transform: rotate(0deg); }
-    50% {transform: rotate(360deg);}
-    100% {transform: rotate(0deg);}
-}*/
+@keyframes roll {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1440deg); /* Rotate 4 times (360 degrees * 4) */
+    }
+}
 
