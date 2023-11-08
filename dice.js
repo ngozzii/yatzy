@@ -30,8 +30,13 @@ export class Dice {
     }
 
     click (){
-        if (this.isSelected) {this.isSelected = false;}
-        else {this.isSelected= true;}
+        if (this.isSelected) {
+            this.isSelected = false;
+            this.element.classList.remove('selected');}
+        else {
+            this.isSelected= true;
+            this.element.classList.add('selected');
+        }
     }
 
 }
