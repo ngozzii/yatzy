@@ -12,7 +12,7 @@ export function calculateScore (categoryScores, allDice){
 
 }
 
-export function initializeCategories(categoryScores, categoryFinal) {
+export function initializeCategories(categoryScores, categoryFinal, finalScores) {
     categoryScores.set("ones", 0);
     categoryScores.set("twos", 0);
     categoryScores.set("threes", 0);
@@ -46,6 +46,24 @@ export function initializeCategories(categoryScores, categoryFinal) {
     categoryFinal.set("chance", false);
     categoryFinal.set("yatzy", false);
     categoryFinal.set("total", false);
+
+    finalScores.set("ones", 0);
+    finalScores.set("twos", 0);
+    finalScores.set("threes", 0);
+    finalScores.set("fours", 0);
+    finalScores.set("fives", 0);
+    finalScores.set("sixes", 0);
+    finalScores.set("onePair", 0);
+    finalScores.set("twoPair", 0);
+    finalScores.set("threeKind", 0);
+    finalScores.set("fourKind", 0);
+    finalScores.set("smallStraight", 0);
+    finalScores.set("largeStraight", 0);
+    finalScores.set("fullHouse", 0);
+    finalScores.set("chance", 0);
+    finalScores.set("yatzy", 0);
+    finalScores.set("total", 0);
+
 
 }
 
@@ -93,11 +111,11 @@ export function calculateThreeFourkind(soloCounts, categoryScores) {
     let threeKind = 0;
     let fourKind = 0;
 
-    for (let num = 0; num < 6; num++) {
-        if (soloCounts[num] >= 3) {
-            threeKind = (num + 1) * 3;
+    for (let num = 1; num <= 6; num++) {
+        if (soloCounts[num-1] = 3) {
+            threeKind = num * 3;
         }
-        if (soloCounts[num] >= 4) {
+        if (soloCounts[num-1] >= 4) {
             fourKind = (num + 1) * 4;
         }
     }
