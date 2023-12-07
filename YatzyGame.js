@@ -19,6 +19,7 @@ class Player {
         this.categoryScores = new Map ();
         this.categoryFinal = new Map ();
         this.finalScores = new Map();
+        this.hasRolled = false;
         initializeCategories (this.categoryScores, this.categoryFinal, this.finalScores);
     }
 
@@ -33,6 +34,10 @@ class Player {
     getFinalScores() {
         return this.finalScores;
     }
+
+    getHasRolled(){return this.hasRolled;}
+
+    toggleHasRolled(){this.hasRolled = !this.hasRolled;}
 }
 
 // Get references to the button and modal elements
@@ -140,9 +145,14 @@ initializeCategories(categoryScores, categoryFinal);*/
 //const finalCategoryScores = new Map();
 
 function chooseScore(){
-    playModal.style.display = "block";
-    rollCount = setRollCount;
-    ++currentRound;
+    console.log(singlePlayer.getHasRolled());
+    if (singlePlayer.getHasRolled()){
+        playModal.style.display = "block";
+        rollCount = setRollCount;
+        ++currentRound;
+    } else {
+        alert("Please roll the dice before choosing a category to score in.");
+    }
 }
 
 /*function playRound(){
@@ -163,6 +173,7 @@ function rollDice() {
         //force player to make a category selection
         chooseScore();
     }else{
+        singlePlayer.toggleHasRolled();
         --rollCount;
         console.log('roll count:', rollCount);
         allDice.forEach((element) => {
@@ -226,6 +237,7 @@ selectButton.addEventListener("click", () => {
 
         //re-enable roll button if disabled
         rollButton.disabled = false;
+        singlePlayer.toggleHasRolled();
 
         } else {
             console.error('Invalid selection');
@@ -238,7 +250,7 @@ selectButton.addEventListener("click", () => {
 
 // Close the modal if the user clicks outside the modal
 window.addEventListener("click", (event) => {
-  if (event.target === modal) {
+  if (event.target === playModal) {
     playModal.style.display = "none";
   }
 });
